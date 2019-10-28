@@ -20,10 +20,10 @@ param
     [string]$EnvironmentName,
 
     [Parameter(Mandatory = $false)]
-    [string]$EnvironmentLocation = "westus",
+    [string]$EnvironmentLocation = "northeurope",
 
     [Parameter(Mandatory = $false)]
-    [string]$FhirApiLocation = "westus2",
+    [string]$FhirApiLocation = "northeurope",
 
     [Parameter(Mandatory = $false)]
     [string]$SourceRepository = "https://github.com/Microsoft/fhir-server-samples",
@@ -35,11 +35,11 @@ param
     [bool]$DeploySource = $true,
 
     [Parameter(Mandatory = $false)]
-    [bool]$UsePaaS = $true,
+    [bool]$UsePaaS = $false,
 
     [Parameter(Mandatory = $false)]
     [ValidateSet('cosmos','sql')]
-    [string]$PersistenceProvider = "cosmos",
+    [string]$PersistenceProvider = "sql",
 
     [Parameter(Mandatory = $false)]
     [ValidateSet('Stu3','R4')]
